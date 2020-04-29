@@ -8,18 +8,23 @@ public class TessSentence {
 	
 	private String sentiment;
 
-	private int id;
+	private int id = 0;
 
 	private List<TessWord> words;
 
 	private List<String> listPos;
 	
-	public TessSentence(int id, String sentence, String sentiment, List<TessWord> listWords, List<String> listPos) {
-		this.id= id;
+	public TessSentence(String sentence, String sentiment, List<TessWord> listWords, List<String> listPos) {
+		this.id++;
 		this.setSentence(sentence);
 		this.setSentiment(sentiment);
 		this.setWords(listWords);
 		this.setListPos(listPos);
+	}
+
+	public TessSentence(String sentence, List<TessWord> listWords) {
+		this.setSentence(sentence);
+		this.setWords(listWords);
 	}
 
 	public String getSentence() {
