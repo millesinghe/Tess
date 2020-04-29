@@ -1,8 +1,6 @@
-package org.genesislab.ai.exec;
+package org.genesislab.nlp.exec;
 
 import java.util.List;
-
-import org.genesislab.ai.nlp.Pipeline;
 
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
@@ -15,7 +13,7 @@ public class NameEntityRcognizer {
 
 		String text = "Hey, Im Milinda Bandara. I have a brother, His name is Thilina Namal. We lives in Kurunegala, Sri Lanka";
 
-		StanfordCoreNLP core = Pipeline.getPipeline();
+		StanfordCoreNLP core = NLPEngine.getNLPEngine();
 
 		CoreDocument doc = new CoreDocument(text);
 		core.annotate(doc);

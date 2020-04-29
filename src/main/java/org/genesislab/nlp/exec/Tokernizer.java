@@ -1,8 +1,6 @@
-package org.genesislab.ai.exec;
+package org.genesislab.nlp.exec;
 
 import java.util.List;
-
-import org.genesislab.ai.nlp.Pipeline;
 
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.CoreDocument;
@@ -14,7 +12,7 @@ public class Tokernizer {
 
 		String text = "Hey!, Im Milinda Bandara";
 
-		StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
+		StanfordCoreNLP stanfordCoreNLP = NLPEngine.getNLPEngine();
 
 		CoreDocument coreDoc = new CoreDocument(text);
 		stanfordCoreNLP.annotate(coreDoc);

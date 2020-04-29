@@ -1,8 +1,6 @@
-package org.genesislab.ai.exec;
+package org.genesislab.nlp.exec;
 
 import java.util.List;
-
-import org.genesislab.ai.nlp.Pipeline;
 
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
@@ -14,7 +12,7 @@ public class SentimentAnalyzer {
 
 		String text = "Hey!, I'm Milinda Bandara. I don't like to be a typical Software Engineer. But I like to be a innovative tech engineer. Specially I not like to loose";
 
-		StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
+		StanfordCoreNLP stanfordCoreNLP = NLPEngine.getNLPEngine();
 
 		CoreDocument coreDoc = new CoreDocument(text);
 		stanfordCoreNLP.annotate(coreDoc);

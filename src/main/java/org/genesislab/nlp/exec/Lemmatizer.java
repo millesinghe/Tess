@@ -1,10 +1,7 @@
-package org.genesislab.ai.exec;
+package org.genesislab.nlp.exec;
 
 import java.util.List;
 
-import org.genesislab.ai.nlp.Pipeline;
-
-import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
@@ -15,7 +12,7 @@ public class Lemmatizer {
 		
 		String text = "Hey, I am Milinda and Interesting and Learning on innovative and trending tecnologies.";
 
-		StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
+		StanfordCoreNLP stanfordCoreNLP = NLPEngine.getNLPEngine();
 
 		CoreDocument doc = new CoreDocument(text);
 
@@ -24,7 +21,6 @@ public class Lemmatizer {
 		List<CoreLabel> wordList = doc.tokens();
 
 		for (CoreLabel word : wordList) {
-
 			String lemma = word.lemma();
 			System.out.println(lemma + " - " + word.originalText());
 		}

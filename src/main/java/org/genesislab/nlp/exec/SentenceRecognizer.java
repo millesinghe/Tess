@@ -1,8 +1,6 @@
-package org.genesislab.ai.exec;
+package org.genesislab.nlp.exec;
 
 import java.util.List;
-
-import org.genesislab.ai.nlp.Pipeline;
 
 import edu.stanford.nlp.pipeline.CoreDocument;
 import edu.stanford.nlp.pipeline.CoreSentence;
@@ -14,7 +12,7 @@ public class SentenceRecognizer {
 
 		String text = "Hey!, I'm Milinda Bandara. I graduate from University of Westminster. Currently working as a Software Engineer";
 
-		StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
+		StanfordCoreNLP stanfordCoreNLP = NLPEngine.getNLPEngine();
 
 		CoreDocument coreDoc = new CoreDocument(text);
 		stanfordCoreNLP.annotate(coreDoc);

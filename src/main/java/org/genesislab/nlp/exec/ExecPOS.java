@@ -1,10 +1,7 @@
-package org.genesislab.ai.exec;
+package org.genesislab.nlp.exec;
 
 import java.util.List;
 
-import org.genesislab.ai.nlp.Pipeline;
-
-import edu.stanford.nlp.ling.CoreAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations;
 import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.CoreDocument;
@@ -16,7 +13,7 @@ public class ExecPOS {
 
 		String text = "Hey, I am Milinda Bandara and graduated from University of Westminster.";
 		
-		StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipeline();
+		StanfordCoreNLP stanfordCoreNLP = NLPEngine.getNLPEngine();
 		
 		CoreDocument doc = new CoreDocument(text);
 		
